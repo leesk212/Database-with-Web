@@ -13,3 +13,14 @@
 Enter password:
 ```
 
+## MySQL 구문
+
+```
+
+```
+
+## MySQL - workbench 설치 및 실행
+
+```
+~$ sudo apt-get install mysql-workbench
+```
