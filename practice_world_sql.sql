@@ -70,5 +70,37 @@ order by Population DESC;
 #국가 면적 크기로 내림차순하기
 SELECT *
 from country
-order by SurfaceArea DESC
+order by SurfaceArea DESC;
 
+#DISTINCT
+#중복되는 것을 제외하고 보여줌
+SELECT DISTINCT CountryCode
+FROM city;
+
+#LIMIT
+#출력되는 갯수를 제한해줌
+SELECT *
+FROM city
+ORDER By Population DESC
+LIMIT 10;
+#workbench에서 자동으로 걸려짐
+
+#MAX
+SELECT CountryCode, AVG(Population) as 'average'
+FROM city
+GROUP By CountryCode;
+#Country별로 묶어 이때 가장 population이 큰것만 묶어
+#AVG MIN MAX COUNT..
+
+#LAB5
+#도시의 갯수
+SELECT Co#all = * city table의 전체 갯수를 파악해
+FROM city;
+
+SELECT AVG(Population)
+FROM city;
+
+#Group BY
+#그룹으로 묶어주는 역할
+#집계함수 Aggregate Function를 함께 사용
+##AVG
