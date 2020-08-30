@@ -6,7 +6,7 @@
 ~$ sudo apt-get install mysql-server
 ```
 
-## MySQK 접속
+## MySQL 접속
 
 ```
 ~$ mysql -u root -p
