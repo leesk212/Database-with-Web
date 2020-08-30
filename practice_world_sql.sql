@@ -93,8 +93,9 @@ GROUP By CountryCode;
 #AVG MIN MAX COUNT..
 
 #LAB5
-#도시의 갯수
-SELECT Co#all = * city table의 전체 갯수를 파악해
+#도시의 갯수 
+#COUNT = 행의 갯수
+SELECT Count(*)#all = * city table의 전체 갯수를 파악해
 FROM city;
 
 SELECT AVG(Population)
@@ -102,5 +103,27 @@ FROM city;
 
 #Group BY
 #그룹으로 묶어주는 역할
+#CountryCode를 보기좋게 그룹해서 보여줘
 #집계함수 Aggregate Function를 함께 사용
-##AVG
+
+
+#GROUP BY한 것 중에서 
+SELECT countryCode, MAX(population)
+FROM city
+GROUP by CountryCode
+HAVING MAX(Population) > 8000000;
+
+#ROLLUP 
+#연산 과정까지 같이 해서 보여주는 것(중간 합계를 보여줌)
+SELECT COuntryCOde, Name,SuM(Population)
+FROM city
+GROUP BY COUNTRYCode, NAME with ROLLUP;
+
+#JOIN은 데이터베이스 내의 여러 테이블에서 
+#가져온 레코드를 조합하여 하나의 테이블이나 결과 집합으로 표현
+SELECT *
+FROM city
+JOIN country ON city.COUNtryCode = country.Code
+#국가 코드가 같은 것으로 JOIN해줘!!json_separator
+JOIN countrylanguage ON city.CountryCode = countrylanguage.CountryCode
+#3개의 Table이 한번에 연결됌
