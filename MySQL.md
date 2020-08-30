@@ -23,4 +23,5 @@ Enter password:
 
 ```
 ~$ sudo apt-get install mysql-workbench
+~$ mysql-workbench
 ```
